@@ -1,11 +1,11 @@
 /*
-	Example of a very simple MQTT consumer app.
+	Example of a very simple consumer app.
 
-	This app subscribes to events at a public MQTT broker and makes them 
+	This app publishes events and makes them 
 	available by a REST API. For demonstration purposes, it continuously 
-	publishes random values under the subscribed MQTT topic.
-
-	(C) Fraunhofer AISEC, 2017
+	publishes the current global time in milliseconds.
+	
+	(C) Fraunhofer AISEC, 2017s
 */
 var time = 0
 
@@ -14,12 +14,11 @@ var express = require('express');
 var app = express();
 
 
-
-// Publish event
+// Publish time event
 function publishEvent () { 
     var d = new Date();
     time = d.getTime();
-    console.log('Veroeffentliche Zeit %f', String(time))
+    console.log('Publish time %f', String(time))
 }
 
 // Publish on intervall
@@ -30,6 +29,7 @@ setInterval(() => {
 // Start REST endpoint /timeMilliseconds
 app.get('/timeMilliseconds', function (req, res) {
    res.end(String(time))
+//It is important to send the time value as a String.
 })
 
 var server = app.listen(8080, function () {

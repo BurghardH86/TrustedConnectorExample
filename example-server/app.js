@@ -1,7 +1,7 @@
 /*
   Example of a very simple REST consumer app.
 
-  This app accepts sensor values from POST requests to 
+  This app accepts values from POST requests to 
   http://<host>:8081/timeMilliseconds
   and displays them under
   http://<host>:8081/
