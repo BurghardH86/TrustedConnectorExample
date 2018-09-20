@@ -1,4 +1,4 @@
-Example-009 demonstrates the connection between two REST services and the conversion of MQTT messages using the Trusted IoT Connector.
+This example of the trusted connector is based on Example-009. It demonstrates the connection between two REST services using the Trusted IoT Connector.
 
 Documentation is located at https://fraunhofer-aisec.github.io/trusted-iot-connector-documentation/
 
