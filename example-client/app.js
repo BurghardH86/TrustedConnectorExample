@@ -7,10 +7,12 @@
 	
 	(C) Fraunhofer AISEC, 2017s
 */
-var time = 0
+var time = 0;
 
 // Start REST server
+//Express variable is used to represent that express is requiered.
 var express = require('express');
+//Initialize express using the brackets and puts the initialized server into the variable app.
 var app = express();
 
 
